@@ -1,0 +1,101 @@
+<div class="container character-box">
+    <div class="character-title">
+        <h2>{{@model.name}}</h2>
+    </div>
+    <span class="character-id">#{{@model.id}}</span>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="avatar center-block" src={{@model.sprites.front_shiny}}>
+        </div>
+        <div class="col-md-8 stats">
+            <div>
+                {{#each @model.types as |type|}}
+                    <span class="monster-type">{{type.type.name}}</span>
+                        
+                {{/each}}
+            </div>
+            <div class="col-md-12">
+                <ul>
+
+                    {{#each @model.stats as |stats|}}
+
+                     <li>
+                         
+                        {{capitaliz stats.stat.name}}:<progress class="col-md-6" value={{stats.base_stat}} max="100">{{stats.base_stat}}</progress>
+                        
+                     </li>
+                    {{/each}}
+                </ul> 
+
+            </div>
+        </div>
+
+    
+    
+    </div>
+    <div class="profile-title">PROFILE</div>
+    <div class="row">
+        <span class="col-6">
+            <strong>Height:</strong><br/>
+            <strong>Weight:</strong><br/>
+             <strong>Abilities:</strong><br/>
+        </span>
+        <span class="col-6">
+            {{@model.height}}<br/>
+            {{@model.weight}}<br/>
+            {{#each @model.abilities as |abilities|}}
+                {{capitaliz abilities.ability.name}}
+            {{/each}}
+            
+
+        </span>
+    </div>
+    <div class="profile-title">MOVES</div>
+    <div class="row">
+        {{#each @model.moves as |moves|}}
+            {{capitaliz moves.move.name}}<br/>
+        {{/each}}
+
+    </div>
+</div>
+
+{{!-- <img src={{@model.sprites.front_shiny}}/><br/>
+
+<strong>Name:</strong>{{@model.name}}<br/>
+<strong>Base Experience:</strong>{{@model.base_experience}}<br/>
+<strong>Height:</strong>{{@model.height}}<br/>
+<strong>Weight:</strong>{{@model.weight}}<br/>
+<h3>Types:</h3>
+{{#each @model.types as |types|}}
+    <ul>
+        <li>
+            {{types.type.name}}
+        </li>
+    </ul>
+{{/each}}
+<h3>Abilities:</h3>
+{{#each @model.abilities as |abilities|}}
+   
+    <ul>
+        <li>
+            {{abilities.ability.name}}
+            <ul>
+                <li>hidden:{{abilities.is_hidden}}</li>
+                <li>slot:{{abilities.slot}}</li>
+            </ul>
+        </li>
+    </ul>
+{{/each}}
+<h3>Stats:</h3>
+{{#each @model.stats as |stats|}}
+    
+        {{stats.stat.name}}
+        <ul>
+            
+            <ul>
+                <li>Base stat:{{stats.base_stat}}</li>
+                <li>Effort{{stats.effort}}</li>
+            </ul>
+        </ul>
+    
+{{/each}}  --}}

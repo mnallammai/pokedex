@@ -1,0 +1,130 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css);
+*{
+    padding: 0;
+    border:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:cyan;
+    color:white;
+    margin-bottom: 14px;
+}
+.box-container{
+    position:relative;
+    text-align: center;
+    display: flex;
+    flex-wrap:wrap;
+    height: 100%;
+    width: 100%;
+}
+.box-item span {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+.box-item:hover {
+    animation: bounce 0.5s linear;
+}
+@keyframes bounce {
+    20% {
+        transform: translateY(1px);
+    }
+    40% {
+        transform: translateY(4px);
+    }
+
+    80% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(2);
+    }
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+}
+img{
+    display: block;
+    height:150px;
+    width:150px;
+}
+.box-item{
+    
+    padding: 10px;
+    margin:30px;
+    height:200px;
+    width:200px;
+    align-items: center;
+    background:white;
+    position:relative;
+}
+.box-item li{
+    margin:10px;
+    overflow:hidden;
+    display: inline-flex;
+    list-style-type:none;
+    cursor: pointer;
+}
+.app-title{
+    background-color:darkviolet;
+    padding: 50px;
+}
+.character-box{
+   height:100vh;
+   overflow-y:scroll;
+   padding: 0;
+}
+.container{
+    background-color:white;
+    width:720px;
+    color:black;
+}
+.character-title{
+    background-color: #4c8c2c;
+    text-transform: uppercase;
+    padding: 15px;
+    width: 100%;
+    color:white;
+    text-align: center;
+}
+.character-id{
+    overflow: auto;
+    float:right;
+    padding: 40px;
+    font-size:30px;
+}
+.avatar {
+    max-width: 480px;
+    margin-bottom: 20px;
+}
+.monster-type {
+    background-color: #4c8c2c;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 16px;
+    font-variant: small-caps;
+    font-weight: 600;
+    margin-right: 5px;
+    padding: 1px 10px 5px;
+}
+.stats li{
+    list-style: none;
+    margin: 10px;
+}
+.profile-title{
+    background-color: #4c8c2c;
+    text-transform: uppercase;
+    padding:10px;
+    width:100%;
+    color:white;
+}
+.row{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 20px;
+}

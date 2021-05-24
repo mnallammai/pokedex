@@ -1,0 +1,16 @@
+
+<div class="box-container">
+    
+    {{#each @model.results as |monster index|}}
+        <div class="box-item">
+            <ul>
+                <li>
+                    <LinkTo @route="monster.character" @model={{increment index}}>
+                        <img src={{getImageUrl (increment index)}}/>
+                        <span>{{monster.name}}</span>
+                    </LinkTo>
+                </li>
+            </ul>
+        </div> 
+    {{/each}}
+</div>
