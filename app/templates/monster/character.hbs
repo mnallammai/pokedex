@@ -9,9 +9,14 @@
         </div>
         <div class="col-md-8 stats">
             <div>
+                {{!-- {{#if (eq model.status "complete")}}  {{! works! }}
+  OK
+{{/if}} --}}
                 {{#each @model.types as |type|}}
-                    <span class="monster-type">{{type.type.name}}</span>
-                        
+                   
+                    
+                         <span class="monster-type">{{type.type.name}}</span>
+                    
                 {{/each}}
             </div>
             <div class="col-md-12">

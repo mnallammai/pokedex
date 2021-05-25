@@ -17,6 +17,7 @@ body{
     flex-wrap:wrap;
     height: 100%;
     width: 100%;
+    
 }
 .box-item span {
     font-weight: 600;
@@ -72,17 +73,17 @@ img{
 }
 .app-title{
     background-color:darkviolet;
-    padding: 50px;
+    padding: 20px;
 }
 .character-box{
-   height:100vh;
-   overflow-y:scroll;
+   height:83vh;
    padding: 0;
 }
 .container{
     background-color:white;
     width:720px;
     color:black;
+    overflow-y:scroll;
 }
 .character-title{
     background-color: #4c8c2c;
@@ -111,6 +112,15 @@ img{
     font-weight: 600;
     margin-right: 5px;
     padding: 1px 10px 5px;
+}
+.grass-type{
+    background-color: #4c8c2c;
+}
+.fire-type{
+    background-color: orange;
+}
+.poison-type{
+    background-color: violet;
 }
 .stats li{
     list-style: none;
