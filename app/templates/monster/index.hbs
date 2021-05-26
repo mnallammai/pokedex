@@ -1,7 +1,8 @@
-
+<Input @type="text" @value={{this.query}} placeholder="Search"/> {{log this.searchItem}}
 <div class="box-container">
     
     {{#each @model.results as |monster index|}}
+        {{#if (search this.query monster.name)}}
         <div class="box-item">
             <ul>
                 <li>
@@ -12,5 +13,6 @@
                 </li>
             </ul>
         </div> 
+        {{/if}}
     {{/each}}
 </div>

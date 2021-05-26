@@ -1,28 +1,28 @@
 <div class="container character-box">
     <div class="character-title">
-        <h2>{{@model.name}}</h2>
+        <h2>{{@model.characterResult.name}}</h2>
     </div>
-    <span class="character-id">#{{@model.id}}</span>
+    <span class="character-id">#{{@model.characterResult.id}}</span>
     <div class="row">
-        <div class="col-md-4">
-            <img class="avatar center-block" src={{@model.sprites.front_shiny}}>
+        <div class="col-4">
+            <img class="avatar center-block" src={{@model.characterResult.sprites.front_shiny}}>
         </div>
-        <div class="col-md-8 stats">
+        <div class="col-8 stats">
             <div>
                 {{!-- {{#if (eq model.status "complete")}}  {{! works! }}
   OK
 {{/if}} --}}
-                {{#each @model.types as |type|}}
+                {{#each @model.characterResult.types as |type|}}
                    
                     
                          <span class="monster-type">{{type.type.name}}</span>
                     
                 {{/each}}
             </div>
-            <div class="col-md-12">
+            <div class="col-12">
                 <ul>
 
-                    {{#each @model.stats as |stats|}}
+                    {{#each @model.characterResult.stats as |stats|}}
 
                      <li>
                          
@@ -44,20 +44,23 @@
             <strong>Height:</strong><br/>
             <strong>Weight:</strong><br/>
              <strong>Abilities:</strong><br/>
+             <strong>Base Happiness:</strong><br/>
+             <strong>Capture Rate:</strong>
         </span>
         <span class="col-6">
-            {{@model.height}}<br/>
-            {{@model.weight}}<br/>
-            {{#each @model.abilities as |abilities|}}
+            {{@model.characterResult.height}}<br/>
+            {{@model.characterResult.weight}}<br/>
+            {{#each @model.characterResult.abilities as |abilities|}}
                 {{capitaliz abilities.ability.name}}
-            {{/each}}
-            
+            {{/each}}<br/>
+            {{@model.speciesResult.base_happiness}}<br/>
+            {{@model.speciesResult.capture_rate}}
 
         </span>
     </div>
     <div class="profile-title">MOVES</div>
     <div class="row">
-        {{#each @model.moves as |moves|}}
+        {{#each @model.characterResult.moves as |moves|}}
             {{capitaliz moves.move.name}}<br/>
         {{/each}}
 
