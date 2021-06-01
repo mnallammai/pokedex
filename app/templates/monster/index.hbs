@@ -1,18 +1,19 @@
-<Input @type="text" @value={{this.query}} placeholder="Search"/> {{log this.searchItem}}
+<Input @type="text" @value={{this.query}} placeholder="Search" style="width:100%"/>
 <div class="box-container">
+    This is  new-branch website.
     
     {{#each @model.results as |monster index|}}
         {{#if (search this.query monster.name)}}
-        <div class="box-item">
-            <ul>
-                <li>
-                    <LinkTo @route="monster.character" @model={{increment index}}>
-                        <img src={{getImageUrl (increment index)}}/>
-                        <span>{{monster.name}}</span>
-                    </LinkTo>
-                </li>
-            </ul>
-        </div> 
+            <div class="box-item">
+                <ul>
+                    <li>
+                        <LinkTo @route="monster.character" @model={{increment index}}>
+                            <img src={{getImageUrl (increment index)}}/>
+                            <span>{{monster.name}}</span>
+                        </LinkTo>
+                    </li>
+                </ul>
+            </div> 
         {{/if}}
     {{/each}}
 </div>
